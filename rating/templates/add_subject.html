@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+{% extends "base.html" %}
+
+{% block title %}
+	{{ title }}
+{% endblock %}
+
+{% block content %}
+
+	<div class="addsubject_title">
+		<h2>
+			Форма добавления дисциплин
+		</h2>
+    </div>
+
+		<form action="" method="POST">
+            {{ form.hidden_tag() }}
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group-subject-name">
+                            {{ form.subject_name.label }}
+                            {{ form.subject_name }}
+                        </div>
+                        <div class="form-group-subject">
+                            {{ form.teacher.label }}
+                            {{ form.teacher }}
+                            
+                            {{ form.att_date.label }}
+                            {{ form.att_date }}
+                            
+                            {{ form.comment.label }}
+                            {{ form.comment }}<br>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group-select">
+                            {{ form.cathedra.label }}
+                            {{ form.cathedra }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-btn">
+                {{ form.submit() }}
+            </div>
+        </form>
+
+{% endblock %}
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+{% extends "base.html" %}
+
+{% block title %}
+	Обновить обучающегося
+{% endblock %}
+
+{% block content %}
+	<div class="addstudent_title">
+		<h2>
+			<span class="badge bg-secondary">Форма обновления обучающегося</span>
+		</h2>
+	</div>
+
+	<div class="addstudent_body">
+		<form action="" method="post">{% csrf_token %}
+			{{ form.last_name }}<br>
+			{{ form.first_name }}<br>
+			{{ form.second_name }}<br>
+
+			{{ form.student_id }}<br>
+			<div class="alert-danger">{{ form.student_id_errors }}</div>
+
+			<label>Гражданство</label>
+			{{ form.citizenship }}
+
+			<label>Основа обучения</label>
+			{{ form.basis }}
+
+			<label>Уровень образования</label>
+			{{ form.level }}
+
+			<label>Группа</label>
+			{{ form.group }}
+
+			<label>Дата зачисления</label>
+			{{ form.start_date }}
+
+			<label>Текущий статус</label>
+			{{ form.status }}<br>
+
+			{{ form.comment }}<br>
+
+			<button type="submit" class="btn btn-secondary btn-lg">Обновить</button>
+		</form>
+	</div>
+{% endblock %}

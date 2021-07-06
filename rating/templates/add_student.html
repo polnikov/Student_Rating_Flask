@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+
+{% extends "base.html" %}
+
+{% block title %}
+	{{ title }}
+{% endblock %}
+
+{% block content %}
+	<div class="addstudent_title">
+		<h2>
+			Форма добавления обучающегося
+		</h2>
+	</div>
+	<form action="" method="POST">
+		{{ form.hidden_tag() }}
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="form-group">
+						{{ form.last_name.label }}
+						{{ form.last_name() }}
+
+						{{ form.first_name.label }}
+						{{ form.first_name() }}
+
+						{{ form.second_name.label }}
+						{{ form.second_name() }}
+
+						{{ form.student_id.label }}
+						{{ form.student_id }}
+
+						{{ form.start_date.label }}
+						{{ form.start_date }}<br>
+
+						{{ form.comment.label }}
+						{{ form.comment }}<br>
+					</div>
+				</div>
+
+				<div class="col">
+					<div class="form-group">
+						{{ form.citizenship.label }}
+						{{ form.citizenship }}
+
+						{{ form.basis.label }}
+						{{ form.basis }}
+
+						{{ form.level.label }}
+						{{ form.level }}
+
+						{{ form.status.label }}
+						{{ form.status }}
+					</div>
+				</div>
+				<div class="col">
+					<div class="form-group">
+						{{ form.group.label }}
+						{{ form.group }}
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="form-btn">
+			{{ form.submit() }}
+		</div>
+	</form>
+{% endblock %}

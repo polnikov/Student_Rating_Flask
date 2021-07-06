@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+
+	<head>
+		<!-- Обязательные метатеги -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+  
+
+		<title>{{ title }}</title>
+	</head>
+
+	<body>
+		{% with messages = get_flashed_messages() %}
+			{% if messages %}
+				<div class="alert alert-warning" role="alert">
+				{% for message in messages %}
+					{{ message }}<br>
+				{% endfor %}
+				</div>
+			{% endif %}
+		{% endwith %}
+
+		<div class="login_title">
+			<h2>
+				{{ title }}
+			</h2>
+		</div>
+		<form action="{{ url_for('process_login') }}" method="POST">
+			{{ form.hidden_tag() }}
+			<div class="form-group">
+					{{ form.username.label }}
+					{{ form.username() }}
+			</div>
+			<div class="form-group">
+					{{ form.password.label }}
+					{{ form.password() }}<br>
+					
+					{{ form.submit() }}
+			</div>
+		</form>
+
+		<!-- Вариант 1: Bootstrap в связке с Popper -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+			crossorigin="anonymous"></script>
+	</body>
+
+</html>

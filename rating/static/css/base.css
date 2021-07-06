@@ -1,0 +1,216 @@
+body {
+  color: rgb(109, 109, 109);
+}
+
+/* Главная страница */
+.feature_main {
+  text-align: center;
+  padding-top: 20px;
+  /* float: top; */
+}
+/* ----------------------------------------------------------- */
+.student_title, .subject_title, .login_title, .addsubject_title, .addstudent_title {
+  text-align: center;
+  float: top;
+  padding-top: 20px;
+}
+
+.student_result, .subject_result {
+  text-align: left;
+  float: top;
+  margin-left: 30px;
+  font-family: Open Sans;
+}
+
+.student_list_title, .subject_list_title {
+  text-align: center;
+  float: top;
+  font-family: Open Sans;
+}
+
+.student_list ul li a, .subject_list ul li a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.student_list, .subject_list {
+  /* text-align: left;
+  float: top;
+  margin-top: 15px; */
+  margin-left: 20px;
+  margin-right: 20px;
+  font-family: Open Sans;
+  text-decoration: none;
+  color: rgb(109, 109, 109);
+}
+
+.student_detail_title, .subject_detail_title {
+  text-align: left;
+  float: top;
+  padding-top: 20px;
+  margin-left: 200px;
+  font-family: Open Sans;
+}
+
+.student_detail_list, .subject_detail_list {
+  text-align: left;
+  float: top;
+  margin-left: 200px;
+  font-family: Open Sans;
+  font-size: large;
+  width: 500px;
+}
+
+/* ----------------------------------------------------------- */
+/* Форма добавления дисциплины/обучающегося */
+/* form {
+  display: inline-block;
+  width: 500px;
+  margin-top: 5px;
+  text-align: center;
+  font-family: Open Sans;
+}
+
+label {
+  display: block;
+  text-align: left;
+  font-family: Open Sans;
+  padding: 10px;
+}
+
+select {
+  height: 45px;
+  padding: 1px;
+  font-family: Open Sans;
+}
+
+.alert-danger {
+  margin-left: 200px;
+} */
+
+.form-group {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  width: 300px;
+  font-family: Open Sans;
+  display: block;
+}
+
+.form-group-subject {
+  width: 300px;
+  font-family: Open Sans;
+  display: block;
+}
+
+.form-group-select {
+  font-family: Open Sans;
+  margin-top: 20px;
+  display: block;
+}
+
+.form-group-subject-name {
+  margin-right: auto;
+  margin-top: 20px;
+  width: 600px;
+  font-family: Open Sans;
+  display: block;
+}
+
+.form-btn {
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Open Sans;
+  text-align: center
+}
+
+input[type=text], input[type=password], input[type=date] {
+  background-color: #f1f1f1;
+  border: 2px solid #dfdfdf;
+}
+
+/* ----------------------------------------------------------- */
+/* Кнопки Добавить дисциплину/студента */
+.addsubject_button, .addstudent_button {
+  /* text-align: left;
+  float: top; */
+  /* margin-top: 15px; */
+  padding: 10px;
+  margin-left: 20px;
+  font-family: Open Sans;
+}
+
+/* ----------------------------------------------------------- */
+/* Навигационное меню */
+.navbar {
+  height: 40px;
+  margin-top: 0;
+  float: none;
+  
+}
+
+/* Сайдбар ссылки */
+.navbar a {
+  display: block;
+  color: #000000;
+  padding: 16px;
+  font-family: Open Sans;
+  text-decoration: none;
+  text-align: center
+}
+
+.navbar ul {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Активная/текущая ссылка */
+.navbar a.active {
+  background-color: #000000;
+}
+
+/* Ссылки при наведении мыши */
+/* .navbar a:hover:not(.active) {
+  background-color: rgb(189, 189, 189);
+  height: 50px;
+  color: white;
+} */
+
+/* Стиль окна поиска внутри панели навигации */
+.navbar input[type=text] {
+  float: top;
+  padding-right: 50px;
+  margin-top: 8px;
+  border: none;
+  height: 40px;
+  background-color: grey;
+  color: white;
+}
+
+/* Содержание страницы. Значение свойства margin-left должно соответствовать значению свойства width боковой панели */
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+/* На экранах шириной менее 700 пикселей превратить боковую панель в верхнюю панель */
+@media screen and (max-width: 700px) {
+  .navbar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .navbar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+/* На экранах размером менее 400 пикселей панель отображать вертикально, а не горизонтально */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    text-align: center;
+    float: none;
+  }
+}
+ 
